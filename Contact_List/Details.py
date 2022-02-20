@@ -1,7 +1,10 @@
 class Details:
       def __init__(self,site,password):
-    self.site = site
-self.password = password
+            self.site = site
+            self.password = password
+
+            
+    
 
 contact_passwords = []
 
