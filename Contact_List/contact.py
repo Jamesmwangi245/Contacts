@@ -6,7 +6,7 @@ from pyrfc3339 import generate
 #creating classes
 class Contact:
     def __init__(self,fname,sname,username,password):
-        self.fname = fname
+      self.fname = fname
     Self.sname = sname
     SelfReg.username = username
     self.password = password
