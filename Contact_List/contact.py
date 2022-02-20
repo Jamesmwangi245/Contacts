@@ -1,72 +1,55 @@
+from msilib.schema import SelfReg
 from tokenize import Number
+from typing_extensions import Self
 from pyrfc3339 import generate
 
 #creating classes
 class Contact:
-    """"""
-    class that generates new instances of contancts
-    """"""
-    pass
-__init__method
-def__init__(self,first_name,last_name,phone_number,email):
-'''
-    __init__method that helps us define properties for our objects.
-    Args:
-        first_name:New contact first name.
-        last_name:New contact last name.
-        number:New contact phone number.
-        email:New contact email address.
-'''
+    def __init__(self,fname,sname,username,password):
+        self.fname = fname
+    Self.sname = sname
+    SelfReg.username = username
+    self.password = password
 
+contact_info = []
 
-...
-    def __init__(self,first_name,last_name,phone_number,email):
-...
+def new_acc(self):
+    '''
+    add an account to the list
+    '''
+    Contact.user_info.append(self)
 
-class Contact:
-    """
-    Class that generates new instances of contacts.
-    """
+def del_acc(self):
+    '''
+    delete an account
+    '''
+    Contact.user_info.remove(self)
 
-    def __init__(self,first_name,last_name,phone_number,email):
+  
+@classmethod
+def find_by_username(cls,username):
+    '''
+    args:username to search for
+    returns:user account that matches username
+    '''
+    for user in cls.user_info:
+      if user.username == username:
+        return user
 
-      # docstring removed for simplicity
+@classmethod
+def user_exists(cls,username):
+    '''
+    loop through list to check if username exists then return boolean
+    '''  
+    for user in cls.user_info:
+      if user.username == username:
+        return True
+      
+      return False
 
-        self.first_name = james
-        self.last_name = kariuki
-        self.phone_number = 0797148382
-        self.email = james.kariuki@student.moringaschool.com
-
-        class Contact:
-        """
-        Class that generates new instances of contacts.
-        """
-
-    contact_list = [] # Empty contact list
-
-    def __init__(self,first_name,last_name,number,email):
-
-      # docstring removed for simplicity
-
-        self.first_name = first_name
-        self.last_name = last_name
-        self.phone_number = number
-        self.email = email
-
-contact_list = [] # Empty contact list
- # Init method up here
-def save_contact(self):
-
-        '''
-        save_contact method saves contact objects into contact_list
-        '''
-
-        Contact.contact_list.append(self)
-
-
-            @classmethod
-    def display_contacts(cls):
-        '''
-        method that returns the contact list
-        '''
-        return cls.contact_list
+@classmethod
+def display_users(cls):
+    '''
+    show all user accounts
+    '''
+    return cls.user_info
