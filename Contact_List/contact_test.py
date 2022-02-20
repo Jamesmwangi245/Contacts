@@ -1,5 +1,3 @@
-from msilib.schema import SelfReg
-from typing_extensions import Self
 import unittest # Importing the unittest module
 from contact import Contact # Importing the contact class
 
